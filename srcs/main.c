@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:34:28 by doley             #+#    #+#             */
-/*   Updated: 2024/12/15 19:09:26 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/16 17:36:08 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	data_init(t_data *data)
 	data->y_start = -1;
 	data->found_exit = 0;
 	data->vector_x = 0;
-	data->vector_y;
+	data->vector_y = 0;
 	data->img = NULL;
 	data->xpm_height = 64;
 	data->xpm_width = 64;
@@ -37,6 +37,7 @@ static void	data_init(t_data *data)
 	data->player = "xpm/playerRight/xpm";
 }
 
+/*
 static int	on_keypress(int keycode, void *data)
 {
 	if (keycode == 65307)
@@ -51,6 +52,7 @@ static int	on_keypress(int keycode, void *data)
 		return (move_right(data));
 	return (0);
 }
+*/
 
 int	main(int argc, char **argv)
 {
@@ -65,8 +67,8 @@ int	main(int argc, char **argv)
 	if (argc == 2 && check_map(argv[1], &data))
 	{
 		game_init(&data);
-		mlx_hook(data.win_ptr, 2, 1, &on_keypress, &data);
-		mlx_hook(data.win_ptr, 17, 0, &ft_exit, &data);
+//		mlx_hook(data.win_ptr, 2, 1, &on_keypress, &data);
+//		mlx_hook(data.win_ptr, 17, 0, &ft_exit, &data);
 		mlx_loop(data.mlx_ptr);
 	}
 }
