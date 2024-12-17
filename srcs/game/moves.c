@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:11:23 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 15:28:32 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 21:56:10 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ int	move_left(t_data *data)
 	data->vector_x -= 32;
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->img->pacman_left, data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);

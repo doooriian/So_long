@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:34:28 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 20:31:15 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 21:47:40 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ static void	check_img(t_data *data)
 		ft_exit(data);
 }
 
-/*
 static int	on_keypress(int keycode, void *data)
 {
 	if (keycode == 65307)
@@ -95,7 +94,6 @@ static int	on_keypress(int keycode, void *data)
 		return (move_right(data));
 	return (0);
 }
-*/
 
 int	main(int argc, char **argv)
 {
@@ -113,8 +111,8 @@ int	main(int argc, char **argv)
 		img_init(&data);
 		check_img(&data);
 		init_map(&data);
-//		mlx_hook(data.win_ptr, 2, 1, &on_keypress, &data);
-//		mlx_hook(data.win_ptr, 17, 0, &ft_exit, &data);
+		mlx_hook(data.win_ptr, 2, 1, &on_keypress, &data);
+		mlx_hook(data.win_ptr, 17, 0, &ft_exit, &data);
 		mlx_loop(data.mlx_ptr);
 	}
 }
