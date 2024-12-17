@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:34:28 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 02:13:07 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 15:22:24 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,50 @@ static void	data_init(t_data *data)
 	data->found_exit = 0;
 	data->vector_x = 0;
 	data->vector_y = 0;
-	data->img = NULL;
 	data->xpm_height = 32;
 	data->xpm_width = 32;
 	data->moves = 0;
 	data->items = 0;
-	data->player = "xpm/playerRight/xpm";
+	data->img = NULL;
+}
+
+static void	img_init(t_data *data)
+{
+	data->img = malloc(sizeof(t_img));
+	data->img->corner_BL = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/corner_BL.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->corner_BR = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/corner_BR.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->corner_TL = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/corner_TL.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->corner_TR = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/corner_TR.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->dot = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/dot.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->floor = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/floor.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->line_H = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/line_H.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->line_V = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/line_V.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->pacman_down = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/pacman_down.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->pacman_left = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/pacman_left.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->pacman_right = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/pacman_right.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->pacman_up = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/pacman_up.xpm", &data->xpm_width, &data->xpm_height);
+}
+
+static int	check_img(t_data *data)
+{
+	if (!data->img->corner_BL || !data->img->corner_BR || !data->img->corner_BL
+		|| !data->img->corner_TL || !data->img->corner_TR || !data->img->dot
+		|| !data->img->floor || !data->img->line_H || !data->img->line_V
+		|| !data->img->pacman_down || !data->img->pacman_left
+		|| !data->img->pacman_right || !data->img->pacman_up)
+		ft_exit(data);
 }
 
 /*
@@ -67,6 +105,9 @@ int	main(int argc, char **argv)
 	if (argc == 2 && check_map(argv[1], &data))
 	{
 		game_init(&data);
+		img_init(&data);
+		if (!check_img(&data))
+			ft_exit(&data);
 //		mlx_hook(data.win_ptr, 2, 1, &on_keypress, &data);
 //		mlx_hook(data.win_ptr, 17, 0, &ft_exit, &data);
 		mlx_loop(data.mlx_ptr);

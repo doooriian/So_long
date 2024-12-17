@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:11:23 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 02:51:50 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 15:28:32 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,11 @@ int	move_up(t_data *data)
 {
 	if (check_move(data, 1))
 		return (0);
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, "xpm/floor.xpm",
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->floor, data->vector_x, data->vector_y);
 	data->vector_y -= 32;
-	data->player = "xpm/pacman_up.xpm";
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, data->player,
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->pacman_up, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
@@ -67,22 +56,11 @@ int	move_down(t_data *data)
 {
 	if (check_move(data, 2))
 		return (0);
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, "xpm/floor.xpm",
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img->floor,
 		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
 	data->vector_y += 32;
-	data->player = "xpm/pacman_down.xpm";
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, data->player,
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->pacman_down, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
@@ -93,21 +71,11 @@ int	move_left(t_data *data)
 {
 	if (check_move(data, 3))
 		return (0);
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, "xpm/floor.xpm",
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->floor, data->vector_x, data->vector_y);
 	data->vector_x -= 32;
-	data->player = "xpm/pacman_left.xpm";
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, data->player,
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->pacman_left, data->vector_x, data->vector_y);
 	mlx_destroy_image(data->mlx_ptr, data->img);
 	data->moves++;
 	put_exit(data);
@@ -119,22 +87,11 @@ int	move_right(t_data *data)
 {
 	if (check_move(data, 4))
 		return (0);
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, "xpm/floor.xpm",
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->floor, data->vector_x, data->vector_y);
 	data->vector_x += 32;
-	data->player = "xpm/pacman_right.xpm";
-	data->img = mlx_xpm_file_to_image(data->mlx_ptr, data->player,
-			&data->xpm_width, &data->xpm_height);
-	if (!data->img)
-		ft_exit(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img,
-		data->vector_x, data->vector_y);
-	mlx_destroy_image(data->mlx_ptr, data->img);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+		data->img->pacman_right, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
