@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:34:28 by doley             #+#    #+#             */
-/*   Updated: 2024/12/16 17:36:08 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 02:13:07 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static void	data_init(t_data *data)
 	data->vector_x = 0;
 	data->vector_y = 0;
 	data->img = NULL;
-	data->xpm_height = 64;
-	data->xpm_width = 64;
+	data->xpm_height = 32;
+	data->xpm_width = 32;
 	data->moves = 0;
 	data->items = 0;
 	data->player = "xpm/playerRight/xpm";
