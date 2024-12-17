@@ -6,11 +6,13 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:23:59 by doley             #+#    #+#             */
-/*   Updated: 2024/12/16 17:57:01 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 01:12:20 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
+
+
 
 bool	check_map(char *input, t_data *data)
 {
