@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:11:15 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 02:12:41 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/17 17:30:58 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,8 @@ void	put_exit(t_data *data)
 			{
 				if (data->map[i][j] == 'E')
 				{
-					data->img = mlx_xpm_file_to_image(data->mlx_ptr, \
-"xpm/hoop.xpm", &data->xpm_width, &data->xpm_height);
-					if (!data->img)
-						ft_exit(data);
 					mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
-						data->img, j * 32, i * 32);
+						data->img->exit, j * 32, i * 32);
 					mlx_destroy_image(data->mlx_ptr, data->img);
 				}
 				j++;

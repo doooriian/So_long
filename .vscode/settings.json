@@ -1,5 +1,6 @@
 {
 	"files.associations": {
 		"so_long.h": "c"
-	}
+	},
+	"functionHeaderExtension.headerFilePath": "/home/dley/Workspace/So_long/includes/so_long.h"
 }
