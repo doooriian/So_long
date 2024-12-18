@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:10:50 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:03:28 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:18:04 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ void	put_image(t_data *data, char c, int i, int j)
 	else if (c == 'E')
 		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 			data->img->floor, j * 32, i * 32);
+	else if (c == 'X')
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->enemy, j * 32, i * 32);
 	if (!data->img)
 		ft_exit(data);
 }

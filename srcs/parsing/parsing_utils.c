@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:24:43 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:54:52 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:15:53 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,11 @@ void	cpy_map(char *input, t_data *data)
 // 	close(fd);
 // }
 
+static bool	is_invalid(char c)
+{
+	return (c != '0' && c != '1' && c != 'X');
+}
+
 void	count_letters(t_data *data)
 {
 	int	i;
@@ -89,7 +94,7 @@ void	count_letters(t_data *data)
 			}
 			else if (data->map[i][j] == 'E')
 				data->exit++;
-			else if (data->map[i][j] != '1' && data->map[i][j] != '0')
+			else if (is_invalid(data->map[i][j]))
 				data->invalid_letter++;
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:11:23 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:54:19 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:20:19 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	check_move(t_data *data, int dir)
 			ft_exit(data);
 		return (0);
 	}
+	else if (data->map[i][j] == 'X')
+		return (ft_exit(data));
 	else
 		return (0);
 }

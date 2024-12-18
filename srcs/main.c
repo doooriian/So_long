@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:34:28 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:53:58 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:10:39 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ static void	check_img(t_data *data)
 			"xpm/exit.xpm", &data->xpm_width, &data->xpm_height);
 	data->img->ball = mlx_xpm_file_to_image(data->mlx_ptr,
 			"xpm/pacman_ball.xpm", &data->xpm_width, &data->xpm_height);
+	data->img->enemy = mlx_xpm_file_to_image(data->mlx_ptr,
+			"xpm/enemy.xpm", &data->xpm_width, &data->xpm_height);
 	if (!data->img->corner_bl || !data->img->corner_br || !data->img->corner_bl
 		|| !data->img->corner_tl || !data->img->corner_tr || !data->img->dot
 		|| !data->img->floor || !data->img->line_h || !data->img->line_v

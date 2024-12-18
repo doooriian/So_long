@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:23:59 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:34:35 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:17:16 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ void	init_visited(t_data *data)
 void	mark_access(t_data *data, int x, int y, int *found_collec)
 {
 	if (x < 0 || x >= data->width || y < 0 || y >= data->height
-		|| data->map[y][x] == '1' || data->visited[y][x])
+		|| data->map[y][x] == '1' || data->visited[y][x]
+		|| data->map[y][x] == 'X')
 		return ;
 	data->visited[y][x] = true;
 	if (data->map[y][x] == 'C')

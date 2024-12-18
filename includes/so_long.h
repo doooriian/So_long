@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:42:46 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:49:01 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:10:51 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_img
 	char	*pacman_right;
 	char	*pacman_up;
 	char	*ball;
+	char	*enemy;
 }	t_img;
 
 typedef struct s_data
