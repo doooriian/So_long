@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:23:59 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 15:17:16 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 15:42:48 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ bool	check_map(char *input, t_data *data)
 		return (ft_free_error(5, data), 0);
 	if (!check_way_possible(data))
 		return (ft_free_error(6, data), 0);
-	if (data->height > 33 || data->width > 60)
+	if (data->height > 42 || data->width > 80)
 		return (ft_free_error(7, data), 0);
 	return (1);
 }
