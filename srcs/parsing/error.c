@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 01:26:41 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 01:27:27 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:34:54 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,15 @@ void	ft_free_error(int i, t_data *data)
 	if (i == 3)
 		ft_printf("Error\nEach lines must have the same length\n");
 	else if (i == 4)
-		ft_printf("Error\nMap must be rectangular\n");
-	else if (i == 5)
 		ft_printf("Error\nMap must be closed by walls\n");
-	else if (i == 6)
+	else if (i == 5)
 	{
 		ft_printf("Error\nMap must contain :\n- one 'P' (player)\n");
 		ft_printf("- one 'E' (exit)\n- at least one 'C' (collectibles)\n");
 		ft_printf("- and several '0' and '1' for spaces and walls\n");
 	}
-	else if (i == 7)
+	else if (i == 6)
 		ft_printf("Error\nMap can't be finished, no way found\n");
-	else if (i == 8)
+	else if (i == 7)
 		ft_printf("Error\nMap is too big\n");
 }

@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:42:46 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 19:14:31 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:33:26 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ typedef struct s_data
 
 
 /* FUNCTIONS */
+void	display_moves(t_data *data);
 bool	check_way_possible(t_data *data);
 bool	is_exit_access(t_data *data);
 void	mark_access(t_data *data, int x, int y, int *found_collec);

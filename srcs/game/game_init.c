@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:10:50 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 20:33:51 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:03:28 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	game_init(t_data *data)
 {
 	data->mlx_ptr = mlx_init();
 	data->win_ptr = mlx_new_window(data->mlx_ptr, data->width * 32,
-			data->height * 32, "so_long");
+			(data->height + 1) * 32, "so_long");
 	data->vector_x = data->x_start * 32;
 	data->vector_y = data->y_start * 32;
 	return (1);

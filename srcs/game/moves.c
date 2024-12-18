@@ -6,11 +6,12 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:11:23 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 21:56:10 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:30:28 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
+
 
 int	check_move(t_data *data, int dir)
 {
@@ -49,6 +50,7 @@ int	move_up(t_data *data)
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
+	display_moves(data);
 	return (1);
 }
 
@@ -64,6 +66,7 @@ int	move_down(t_data *data)
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
+	display_moves(data);
 	return (1);
 }
 
@@ -79,6 +82,7 @@ int	move_left(t_data *data)
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
+	display_moves(data);
 	return (1);
 }
 
@@ -94,5 +98,6 @@ int	move_right(t_data *data)
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
+	display_moves(data);
 	return (1);
 }

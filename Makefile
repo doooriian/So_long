@@ -13,6 +13,7 @@ SRCS = 	srcs/main.c includes/gnl/get_next_line.c includes/gnl/get_next_line_util
 		srcs/parsing/error.c srcs/free.c srcs/parsing/parsing_check.c \
 		srcs/parsing/parsing_utils.c srcs/parsing/parsing.c srcs/game/game_init.c \
 		srcs/game/moves.c srcs/game/game_utils.c srcs/game/perimeter.c srcs/game/wall.c \
+		srcs/game/display_move.c
 
 
 OBJS = ${SRCS:.c=.o}
