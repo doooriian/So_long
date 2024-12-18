@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:42:46 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 15:10:51 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 17:04:03 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ bool	check_way_possible(t_data *data);
 bool	is_exit_access(t_data *data);
 void	mark_access(t_data *data, int x, int y, int *found_collec);
 void	init_visited(t_data *data);
-void	ft_error(int i);
-int		error_malloc_map(void);
+void	ft_error(t_data *data, int i);
+int		error_malloc_map(t_data *data);
 void	ft_free_error(int i, t_data *data);
 bool	check_input(char *input);
 bool	check_height(char *input, t_data *data);

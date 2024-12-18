@@ -6,22 +6,24 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 01:26:41 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:34:54 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 17:03:21 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-void	ft_error(int i)
+void	ft_error(t_data *data, int i)
 {
+	free(data->img);
 	if (i == 1)
 		ft_printf("Error\nCan't find the map\n");
 	else if (i == 2)
 		ft_printf("Error\nNot enough lines\n");
 }
 
-int	error_malloc_map(void)
+int	error_malloc_map(t_data *data)
 {
+	free(data->img);
 	ft_printf("Error\n Malloc of the map didn't work\n");
 	exit (0);
 }
@@ -29,6 +31,7 @@ int	error_malloc_map(void)
 void	ft_free_error(int i, t_data *data)
 {
 	free_map(data);
+	free(data->img);
 	if (i == 3)
 		ft_printf("Error\nEach lines must have the same length\n");
 	else if (i == 4)

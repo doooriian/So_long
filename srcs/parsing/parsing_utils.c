@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:24:43 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 15:48:38 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 17:04:30 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	cpy_map(char *input, t_data *data)
 	if (!data->map)
 	{
 		close(fd);
-		error_malloc_map();
+		error_malloc_map(data);
 	}
 	i = 0;
 	while (i <= data->height)
