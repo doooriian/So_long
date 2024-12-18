@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 17:24:43 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 20:22:55 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:54:52 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void	cpy_map(char *input, t_data *data)
 // 	}
 // 	close(fd);
 // }
-
 
 void	count_letters(t_data *data)
 {

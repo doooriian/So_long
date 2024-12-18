@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 18:55:51 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 19:46:54 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:49:28 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ int	ft_exit(t_data *data)
 		free_images(data);
 		if (data->img->pacman_up)
 			mlx_destroy_image(data->mlx_ptr, data->img->pacman_up);
+		if (data->img->ball)
+			mlx_destroy_image(data->mlx_ptr, data->img->ball);
 		free(data->img);
 		data->img = NULL;
 	}

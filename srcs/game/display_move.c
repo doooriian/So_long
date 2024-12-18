@@ -6,7 +6,7 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:30:46 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:31:46 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:54:11 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ void	display_moves(t_data *data)
 	moves_str = ft_itoa(data->moves);
 	if (!moves_str)
 		return ;
-
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->img->floor, data->width * 32 / 2, data->height * 32);
 	mlx_string_put(data->mlx_ptr, data->win_ptr,

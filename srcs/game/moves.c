@@ -6,12 +6,11 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:11:23 by doley             #+#    #+#             */
-/*   Updated: 2024/12/18 14:30:28 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:54:19 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
-
 
 int	check_move(t_data *data, int dir)
 {
@@ -45,8 +44,12 @@ int	move_up(t_data *data)
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->img->floor, data->vector_x, data->vector_y);
 	data->vector_y -= 32;
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
-		data->img->pacman_up, data->vector_x, data->vector_y);
+	if (data->moves % 2 == 0)
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->ball, data->vector_x, data->vector_y);
+	else
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->pacman_up, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
@@ -61,8 +64,12 @@ int	move_down(t_data *data)
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img->floor,
 		data->vector_x, data->vector_y);
 	data->vector_y += 32;
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
-		data->img->pacman_down, data->vector_x, data->vector_y);
+	if (data->moves % 2 == 0)
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->ball, data->vector_x, data->vector_y);
+	else
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->pacman_down, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
@@ -77,8 +84,12 @@ int	move_left(t_data *data)
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->img->floor, data->vector_x, data->vector_y);
 	data->vector_x -= 32;
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
-		data->img->pacman_left, data->vector_x, data->vector_y);
+	if (data->moves % 2 == 0)
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->ball, data->vector_x, data->vector_y);
+	else
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->pacman_left, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);
@@ -93,8 +104,12 @@ int	move_right(t_data *data)
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->img->floor, data->vector_x, data->vector_y);
 	data->vector_x += 32;
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
-		data->img->pacman_right, data->vector_x, data->vector_y);
+	if (data->moves % 2 == 0)
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->ball, data->vector_x, data->vector_y);
+	else
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->img->pacman_right, data->vector_x, data->vector_y);
 	data->moves++;
 	put_exit(data);
 	printf("You've done %d moves.\n", data->moves);

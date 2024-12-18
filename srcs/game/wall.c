@@ -6,12 +6,11 @@
 /*   By: doley <doley@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 02:13:30 by doley             #+#    #+#             */
-/*   Updated: 2024/12/17 21:46:16 by doley            ###   ########.fr       */
+/*   Updated: 2024/12/18 14:54:24 by doley            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
-
 
 static void	put_corners_two(t_data *data, int i, int j)
 {
