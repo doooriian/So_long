@@ -96,7 +96,7 @@ Custom map tests and internal debugging tools helped optimize the gameplay exper
 
 ## 📸 Visual Example
 
- ![Sorting Process](https://github.com/doooriian/42-Badges/blob/main/push_swap.gif)
+ ![Sorting Process](https://github.com/doooriian/42-Badges/blob/main/So_long.gif)
 
 ## ✅ Results
 
