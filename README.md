@@ -1,24 +1,14 @@
-<p align="center">
-  <a href="https://42.fr/">
-    <img src="https://github.com/doooriian/42-Badges/blob/main/42_Logo.png" alt="42 Logo" width="100" height="100">
-  </a>
+<div align="center">
 
-  <h1 align="center">So_long</h1>
+<a href="https://42.fr/"><img src="https://raw.githubusercontent.com/doooriian/42-Badges/main/badges/so_longm.png" width="125" alt="So_long 42 project badge" /></a>
 
-  <p align="center">
-    A 2D game project from 42 School
-    <br />
-    <br />
-    <img src="https://github.com/doooriian/42-Badges/blob/main/badges/so_longm.png" alt="So_long Badge" width="125">
-  </p>
-<p align="center"><img src="https://img.shields.io/badge/42%20School-Project-DB2777?style=flat-square" alt="42 School project" /></p>
+# So_long
 
-<p align="center">
-  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/doooriian/So_long?color=1A237E" />
-  <img alt="Code language count" src="https://img.shields.io/github/languages/count/doooriian/So_long?color=00BCD4" />
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/doooriian/So_long?color=7B1FA2" />
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/doooriian/So_long?color=D32F2F" />
-</p>
+**2D game with MiniLibX · Linux**
+
+<img src="https://img.shields.io/badge/42%20School-Project-DB2777?style=flat-square" alt="42 School project" />
+
+</div>
 
 ---
 
