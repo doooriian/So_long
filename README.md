@@ -2,8 +2,6 @@
 
 > **42 School project** · C · 2D graphics · MiniLibX
 
-A small 2D game where a player navigates a map, collects items, and reaches an exit.
-
 ## Overview
 
 A small 2D game where a player navigates a map, collects items, and reaches an exit.
@@ -31,7 +29,11 @@ cd So_long
 make
 ```
 
-Run `./so_long` with an existing `.ber` map path. Consult the tracked maps and the program's input validation to choose a valid map.
+Run with a tracked valid map:
+
+```bash
+./so_long maps/valid/map1.ber
+```
 
 ## Verification
 
