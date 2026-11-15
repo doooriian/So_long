@@ -61,10 +61,10 @@ make fclean
 make re
 
 ```
-To launch the game, run the executable with a map file (in `.ber` format) as an argument:
+To launch the game, use one of the valid `.ber` maps already included in `maps/valid/`:
 
 ```bash
-./so_long maps/my_map.ber
+./so_long maps/valid/map1.ber
 ```
 > **Note:** Ensure your environment meets the prerequisites for MLX (e.g., X11 on Linux).
 
