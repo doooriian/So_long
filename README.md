@@ -4,24 +4,16 @@
 
 # So_long
 
-**42 School · 🕹️ Software engineering project**
+**42 School project · 2D game with MiniLibX**
 
 <img src="https://img.shields.io/badge/42_Project-C%20%7C%202D%20game-DB2777?style=flat-square" alt="So_long technology" />
 <img src="https://img.shields.io/badge/Documentation-Project_Overview-334155?style=flat-square" alt="Project documentation" />
 
 </div>
 
----
-
-
----
-
 ## 🔎 Overview
 
 A small 2D game where a player navigates a map, collects items, and reaches an exit.
-
-
----
 
 ## ✨ Features
 
@@ -30,17 +22,11 @@ A small 2D game where a player navigates a map, collects items, and reaches an e
 - Handle keyboard movement and collisions
 - Track player progress through the map
 
-
----
-
 ## 🧩 Technical approach
 
 The source is organized around parsing, game initialization, movement, and rendering. MiniLibX provides a window and graphics primitives.
 
 > **Tech stack** · C · MiniLibX · X11 · Make.
-
-
----
 
 ## 🚀 Build and usage
 
@@ -58,15 +44,9 @@ Run with a tracked valid map:
 ./so_long maps/valid/map1.ber
 ```
 
-
----
-
 ## 🧪 Verification
 
 Build in the documented environment, exercise normal scenarios and edge cases, and compare actual behaviour with the expected output. No automated CI test suite is included in this repository.
-
-
----
 
 ## ⚠️ Notes and limitations
 
