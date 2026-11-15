@@ -1,29 +1,18 @@
-<br />
-<p align="center">
-  <a href="https://42.fr/">
-    <img src="https://github.com/doooriian/42-Badges/blob/main/42_Logo.png" alt="42 Logo" width="250" height="250">
-  </a>
+<div align="center">
 
-  <h1 align="center">So_long</h1>
+<a href="https://42.fr/"><img src="https://raw.githubusercontent.com/doooriian/42-Badges/main/badges/so_longm.png" width="125" alt="So_long 42 project badge" /></a>
 
-  <p align="center">
-    A 2D game project from 42 School
-    <br />
-    <br />
-    <img src="https://github.com/doooriian/42-Badges/blob/main/badges/so_longm.png" alt="So_long Badge" width="150">
-  </p>
-</p>
+# So_long
 
-<p align="center">
-  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/doooriian/So_long?color=1A237E" />
-  <img alt="Code language count" src="https://img.shields.io/github/languages/count/doooriian/So_long?color=00BCD4" />
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/doooriian/So_long?color=7B1FA2" />
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/doooriian/So_long?color=D32F2F" />
-</p>
+**2D game with MiniLibX · Linux**
+
+<img src="https://img.shields.io/badge/42%20School-Project-DB2777?style=flat-square" alt="42 School project" />
+
+</div>
 
 ---
 
-## ✨ Overview
+## 🔎 Overview
 
 **So_long** is a 2D game project developed during the 42 curriculum, where the goal is to create a simple yet engaging game through solid programming practices and creative design. The game is built using the MLX graphics library and features a maze-like map where the player collects items and navigates through obstacles.
 
@@ -31,7 +20,7 @@ While the base project is open to any theme, I chose a subtle nod to the classic
 
 ---
 
-## 📑 Key Features
+## ✨ Key Features
 
 - **Interactive Gameplay**: Navigate through the maze to collect items and reach the exit.
 - **Graphics & Animations**: Utilizes the MLX library to provide smooth and dynamic visual effects.
@@ -54,6 +43,8 @@ While the base project is open to any theme, I chose a subtle nod to the classic
 
 ## 🚀 How to Build and Run
 
+**Platform:** Linux with X11 and MiniLibX; native macOS is not supported by this build.
+
 Start by cloning the repository and then compile using the provided Makefile commands:
 
 ```bash
@@ -70,14 +61,14 @@ make fclean
 make re
 
 ```
-To launch the game, run the executable with a map file (in `.ber` format) as an argument:
+To launch the game, use one of the valid `.ber` maps already included in `maps/valid/`:
 
 ```bash
-./so_long maps/my_map.ber
+./so_long maps/valid/map1.ber
 ```
 > **Note:** Ensure your environment meets the prerequisites for MLX (e.g., X11 on Linux).
 
-## 🔥 Game Controls
+## 🎮 Game Controls
 
 - **Arrow Keys or W, A, S, D:** Move your character around the maze.
 - **ESC:** Exit the game immediately.
@@ -94,17 +85,6 @@ The project has undergone extensive testing to guarantee:
 
 Custom map tests and internal debugging tools helped optimize the gameplay experience.
 
-## 📸 Visual Example
-
- ![Sorting Process](https://github.com/doooriian/42-Badges/blob/main/So_long.gif)
-
-## ✅ Results
-
-Here’s my score for the Push_swap project:
-
-<p align="center">
-  <img src="https://github.com/doooriian/42-Badges/blob/main/badges/LibftGrade.png" alt="Push_swap Grade">
-</p>
 
 ## 📚 Resources
 
